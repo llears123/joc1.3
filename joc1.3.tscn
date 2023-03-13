@@ -18,35 +18,29 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-height = 28.0
-
 [sub_resource type="CapsuleShape2D" id=3]
-height = 4.0
+height = 10.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 19.5, 20 )
 
 [node name="joc13" type="Node2D"]
 
 [node name="jugador" type="Area2D" parent="."]
-position = Vector2( 170, 292 )
+position = Vector2( 161, 281 )
 script = ExtResource( 9 )
-__meta__ = {
-"_edit_group_": true
-}
 V = 200
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="jugador"]
-position = Vector2( -1, 3 )
+position = Vector2( -15.75, 16.25 )
+scale = Vector2( 0.584507, 0.604478 )
 frames = SubResource( 1 )
 animation = "normal"
-frame = 6
+frame = 4
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador"]
-position = Vector2( 6, 9 )
-shape = SubResource( 2 )
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="jugador"]
-position = Vector2( -15, 21 )
+position = Vector2( -16, 21 )
 shape = SubResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -56,3 +50,15 @@ shape = SubResource( 3 )
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Capa 1"]
 position = Vector2( 224, 327 )
 scale = Vector2( 1.48829, 3.85119 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_left = 235.0
+margin_top = 285.0
+margin_right = 274.0
+margin_bottom = 325.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 254.5, 305 )
+shape = SubResource( 4 )

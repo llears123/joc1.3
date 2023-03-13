@@ -12,7 +12,7 @@ func _ready():
 
 
 func _process(delta):
-	
+	moviment = Vector2()
 	if Input.is_action_pressed("ui_right"):
 		moviment.x += 1
 	if Input.is_action_pressed("ui_left"):
