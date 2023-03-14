@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Capa 1" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Capa 1"]
+position = Vector2( 224, 327 )
+scale = Vector2( 1.48829, 3.85119 )

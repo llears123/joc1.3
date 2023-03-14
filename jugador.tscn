@@ -19,21 +19,21 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=6]
-height = 8.0
+height = 0.0
 
 [node name="jugador" type="KinematicBody2D"]
+position = Vector2( 13, 3 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 V = 200
 
 [node name="cinematic" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.570423, 0.589552 )
+position = Vector2( -13, -3 )
+scale = Vector2( 0.419014, 0.429104 )
 frames = SubResource( 5 )
 animation = "cara"
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -14, 0 )
 shape = SubResource( 6 )
