@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://jugador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Paret.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Paret4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://paret2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://fons.tscn" type="PackedScene" id=10]
+[ext_resource path="res://final.gd" type="Script" id=11]
+[ext_resource path="res://Final.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="joc13" type="Node2D"]
 
@@ -53,3 +57,14 @@ position = Vector2( 251, 393 )
 
 [node name="Paret8" parent="Parets" instance=ExtResource( 3 )]
 position = Vector2( 172, 39 )
+
+[node name="Final" type="Area2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Final/CollisionShape2D"]
+script = ExtResource( 11 )
+
+[connection signal="body_entered" from="Final" to="Final" method="_on_Final_body_entered"]
