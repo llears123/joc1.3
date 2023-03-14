@@ -1,0 +1,39 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://jugador1.gd" type="Script" id=1]
+[ext_resource path="res://Sprite/run-6.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/run-3.png" type="Texture" id=3]
+[ext_resource path="res://Sprite/run-8.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/run-4.png" type="Texture" id=5]
+[ext_resource path="res://Sprite/run-2.png" type="Texture" id=6]
+[ext_resource path="res://Sprite/run-7.png" type="Texture" id=7]
+[ext_resource path="res://Sprite/run-5.png" type="Texture" id=8]
+[ext_resource path="res://Sprite/run-1.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "cara",
+"speed": 15.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+height = 8.0
+
+[node name="jugador" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+V = 200
+
+[node name="cinematic" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.570423, 0.589552 )
+frames = SubResource( 5 )
+animation = "cara"
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 6 )

@@ -1,46 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprite/run-3.png" type="Texture" id=1]
-[ext_resource path="res://Sprite/run-8.png" type="Texture" id=2]
-[ext_resource path="res://Sprite/run-4.png" type="Texture" id=3]
-[ext_resource path="res://Sprite/run-2.png" type="Texture" id=4]
-[ext_resource path="res://Sprite/run-7.png" type="Texture" id=5]
-[ext_resource path="res://Sprite/run-1.png" type="Texture" id=6]
-[ext_resource path="res://Sprite/run-5.png" type="Texture" id=7]
-[ext_resource path="res://Sprite/run-6.png" type="Texture" id=8]
-[ext_resource path="res://jugador1.gd" type="Script" id=9]
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 19.75, 20 )
-
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "cara",
-"speed": 15.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=6]
-height = 8.0
+[ext_resource path="res://jugador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Paret.tscn" type="PackedScene" id=2]
 
 [node name="joc13" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( -1, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-margin_left = 235.0
-margin_top = 285.0
-margin_right = 274.0
-margin_bottom = 325.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 254.75, 305 )
-shape = SubResource( 4 )
+[node name="Paret" parent="." instance=ExtResource( 2 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -50,22 +15,5 @@ shape = SubResource( 4 )
 position = Vector2( 224, 327 )
 scale = Vector2( 1.48829, 3.85119 )
 
-[node name="jugador" type="KinematicBody2D" parent="."]
-position = Vector2( 39, 59 )
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_group_": true
-}
-V = 200
-
-[node name="cinematic" type="AnimatedSprite" parent="jugador"]
-position = Vector2( 105, 252 )
-scale = Vector2( 0.570423, 0.589552 )
-frames = SubResource( 5 )
-animation = "cara"
-frame = 2
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador"]
-position = Vector2( 106, 258 )
-shape = SubResource( 6 )
+[node name="jugador" parent="." instance=ExtResource( 1 )]
+position = Vector2( 173, 322 )

@@ -28,6 +28,6 @@ func _process(delta):
 	if moviment.length() > 0: 
 		moviment = moviment.normalized() * V
 		
-	position += moviment * delta
+	move_and_slide(moviment)
 	position.x = clamp(position.x, 0, limit.x)
 	position.y = clamp(position.y, 0, limit.y)
