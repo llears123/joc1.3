@@ -1,5 +1,7 @@
-extends Area2D
-
+extends CanvasLayer
+onready var textbox_container = $TextboxContainer
+onready var start_symbol = $TextboxContainer/MarginContainer/HBoxContainer/Start
+onready var end_symbol 
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -10,15 +12,7 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-
+func hide_textbox():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-	#pass
-
-
-func _on_Final_body_entered(_body):
-	
-	hide()
-	$Label.text = 'Win'
-	$CollisionShape2D.set_deferred('disabled', true)
-	get_tree().paused = true
+#	pass

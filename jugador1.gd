@@ -11,10 +11,11 @@ var limit := Vector2()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	limit = get_viewport_rect().size
+	#$Label.text = 'aconsegueix el trofeu'
 
 
 
-func _process(delta):
+func _process(_delta):
 	moviment = Vector2()
 	if Input.is_action_pressed("ui_right"):
 		moviment.x += 1

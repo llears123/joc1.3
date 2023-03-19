@@ -10,20 +10,20 @@
 [ext_resource path="res://Paret4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://paret2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://fons.tscn" type="PackedScene" id=10]
-[ext_resource path="res://final.gd" type="Script" id=11]
-[ext_resource path="res://Final.gd" type="Script" id=12]
-
-[sub_resource type="RectangleShape2D" id=1]
+[ext_resource path="res://quadrat.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Final.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Caixa.tscn" type="PackedScene" id=14]
 
 [node name="joc13" type="Node2D"]
 
 [node name="fons" parent="." instance=ExtResource( 10 )]
 
 [node name="jugador" parent="." instance=ExtResource( 1 )]
-position = Vector2( 173, 478 )
+position = Vector2( 183, 486 )
 __meta__ = {
 "_edit_group_": true
 }
+V = 100
 
 [node name="Parets" type="Node2D" parent="."]
 
@@ -35,36 +35,120 @@ position = Vector2( 356, -16 )
 scale = Vector2( 1, 1.05 )
 
 [node name="Paret2" parent="Parets" instance=ExtResource( 9 )]
-position = Vector2( 70, 488 )
+position = Vector2( 70, 489 )
 
 [node name="Paret3" parent="Parets" instance=ExtResource( 7 )]
 position = Vector2( 203, 480 )
-__meta__ = {
-"_edit_group_": true
-}
+
+[node name="Paret25" parent="Parets" instance=ExtResource( 7 )]
+position = Vector2( 210, 519 )
+
+[node name="Paret28" parent="Parets" instance=ExtResource( 7 )]
+position = Vector2( 19, -21 )
+
+[node name="Paret27" parent="Parets" instance=ExtResource( 7 )]
+position = Vector2( 204, -21 )
+
+[node name="Paret24" parent="Parets" instance=ExtResource( 7 )]
+position = Vector2( 19, 520 )
 
 [node name="Paret4" parent="Parets" instance=ExtResource( 8 )]
 position = Vector2( 208, 259 )
 
+[node name="Paret17" parent="Parets" instance=ExtResource( 8 )]
+position = Vector2( 212, 75 )
+
+[node name="Paret10" parent="Parets" instance=ExtResource( 8 )]
+position = Vector2( 255, 106 )
+
+[node name="Paret14" parent="Parets" instance=ExtResource( 8 )]
+position = Vector2( 69, 194 )
+
+[node name="Paret19" parent="Parets" instance=ExtResource( 8 )]
+position = Vector2( 115, 128 )
+
+[node name="Paret21" parent="Parets" instance=ExtResource( 8 )]
+position = Vector2( 160, 127 )
+
 [node name="Paret5" parent="Parets" instance=ExtResource( 6 )]
-position = Vector2( 189, 186 )
+position = Vector2( 208, 327 )
 
 [node name="Paret6" parent="Parets" instance=ExtResource( 4 )]
 position = Vector2( 68, 379 )
 
+[node name="Paret12" parent="Parets" instance=ExtResource( 4 )]
+position = Vector2( 300, 226 )
+
 [node name="Paret7" parent="Parets" instance=ExtResource( 5 )]
 position = Vector2( 251, 393 )
 
+[node name="Paret18" parent="Parets" instance=ExtResource( 5 )]
+position = Vector2( 203, -5 )
+
+[node name="Paret13" parent="Parets" instance=ExtResource( 5 )]
+position = Vector2( 302, 99 )
+
+[node name="Paret15" parent="Parets" instance=ExtResource( 5 )]
+position = Vector2( 88, 314 )
+
+[node name="Paret22" parent="Parets" instance=ExtResource( 5 )]
+position = Vector2( 103, 66 )
+
 [node name="Paret8" parent="Parets" instance=ExtResource( 3 )]
-position = Vector2( 172, 39 )
+position = Vector2( 256, 289 )
 
-[node name="Final" type="Area2D" parent="."]
-script = ExtResource( 12 )
+[node name="Paret26" parent="Parets" instance=ExtResource( 3 )]
+position = Vector2( 163, 460 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Final"]
-shape = SubResource( 1 )
+[node name="Paret11" parent="Parets" instance=ExtResource( 3 )]
+position = Vector2( 43, 182 )
 
-[node name="Sprite" type="Sprite" parent="Final/CollisionShape2D"]
-script = ExtResource( 11 )
+[node name="Paret20" parent="Parets" instance=ExtResource( 3 )]
+position = Vector2( 178, 26 )
 
-[connection signal="body_entered" from="Final" to="Final" method="_on_Final_body_entered"]
+[node name="Paret16" parent="Parets" instance=ExtResource( 3 )]
+position = Vector2( 262, 64 )
+
+[node name="quadrat" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 274, 164 )
+
+[node name="quadrat3" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 220, 165 )
+
+[node name="quadrat2" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 338, 165 )
+
+[node name="quadrat7" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 67, -3 )
+
+[node name="quadrat8" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 106, -3 )
+
+[node name="quadrat6" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 42, 65 )
+
+[node name="quadrat4" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 86, 143 )
+
+[node name="quadrat9" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 86, 128 )
+
+[node name="quadrat5" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 22, 142 )
+
+[node name="quadrat10" parent="Parets" instance=ExtResource( 11 )]
+position = Vector2( 22, 127 )
+
+[node name="Final" parent="." instance=ExtResource( 12 )]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="porta secreta" type="StaticBody2D" parent="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/porta secreta"]
+margin_left = 262.0
+margin_top = 32.0
+margin_right = 302.0
+margin_bottom = 72.0
+
+[node name="Caixa" parent="." instance=ExtResource( 14 )]

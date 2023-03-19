@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0648276, 0.0557709, 0.0664063, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextboxContainer" type="MarginContainer" parent="."]
+margin_left = 31.0
+margin_top = 437.0
+margin_right = 360.0
+margin_bottom = 499.0
+
+[node name="Panel" type="Panel" parent="TextboxContainer"]
+margin_right = 329.0
+margin_bottom = 62.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+margin_right = 329.0
+margin_bottom = 62.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 321.0
+margin_bottom = 54.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 321.0
+margin_bottom = 54.0
+
+[node name="1" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 30.0
+text = "*"
+
+[node name="important" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_left = 12.0
+margin_top = 16.0
+margin_right = 266.0
+margin_bottom = 30.0
+text = "He d'aconseguir el trofeu. I no serà fàcil"
+
+[node name="3" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+margin_left = 270.0
+margin_top = 16.0
+margin_right = 278.0
+margin_bottom = 30.0
+text = "*"
