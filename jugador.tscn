@@ -14,7 +14,7 @@
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "cara",
+"name": "normal",
 "speed": 15.0
 } ]
 
@@ -30,8 +30,7 @@ V = 200
 position = Vector2( -13, -3 )
 scale = Vector2( 0.419014, 0.429104 )
 frames = SubResource( 5 )
-animation = "cara"
-frame = 1
+animation = "normal"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
